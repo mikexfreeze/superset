@@ -1193,7 +1193,6 @@ class Superset(BaseSupersetView):
 
     @log_this
     @api
-    @has_access_api
     @handle_api_exception
     @expose('/explore_json/<datasource_type>/<datasource_id>/', methods=['GET', 'POST'])
     @expose('/explore_json/', methods=['GET', 'POST'])

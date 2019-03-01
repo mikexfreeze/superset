@@ -50,7 +50,7 @@ const store = createStore(
 
 const App = () => (
   <Provider store={store}>
-      <h1>test</h1>
+    <DashboardContainer />
   </Provider>
 );
 

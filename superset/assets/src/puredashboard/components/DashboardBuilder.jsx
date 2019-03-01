@@ -115,52 +115,7 @@ class DashboardBuilder extends React.Component {
       <StickyContainer
         className={cx('dashboard', editMode && 'dashboard--editing')}
       >
-        <Sticky>
-          {({ style }) => (
-            <DragDroppable
-              component={dashboardRoot}
-              parentComponent={null}
-              depth={DASHBOARD_ROOT_DEPTH}
-              index={0}
-              orientation="column"
-              onDrop={handleComponentDrop}
-              editMode={editMode}
-              // you cannot drop on/displace tabs if they already exist
-              disableDragdrop={!!topLevelTabs}
-              style={{ zIndex: 100, ...style }}
-            >
-              {({ dropIndicatorProps }) => (
-                <div>
-                  <DashboardHeader />
-                  {dropIndicatorProps && <div {...dropIndicatorProps} />}
-                  {topLevelTabs && (
-                    <WithPopoverMenu
-                      shouldFocus={DashboardBuilder.shouldFocusTabs}
-                      menuItems={[
-                        <IconButton
-                          className="fa fa-level-down"
-                          label="Collapse tab content"
-                          onClick={this.handleDeleteTopLevelTabs}
-                        />,
-                      ]}
-                      editMode={editMode}
-                    >
-                      <DashboardComponent
-                        id={topLevelTabs.id}
-                        parentId={DASHBOARD_ROOT_ID}
-                        depth={DASHBOARD_ROOT_DEPTH + 1}
-                        index={0}
-                        renderTabContent={false}
-                        renderHoverMenu={false}
-                        onChangeTab={this.handleChangeTab}
-                      />
-                    </WithPopoverMenu>
-                  )}
-                </div>
-              )}
-            </DragDroppable>
-          )}
-        </Sticky>
+
 
         <div className="dashboard-content">
           <div className="grid-container">

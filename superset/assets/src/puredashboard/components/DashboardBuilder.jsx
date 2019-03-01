@@ -115,10 +115,8 @@ class DashboardBuilder extends React.Component {
       <StickyContainer
         className={cx('dashboard', editMode && 'dashboard--editing')}
       >
-
-
         <div className="dashboard-content">
-          <div className="grid-container">
+          <div className="grid-container" style={{margin: "12px"}}>
             <ParentSize>
               {({ width }) => (
                 /*

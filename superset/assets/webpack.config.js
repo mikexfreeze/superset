@@ -116,6 +116,7 @@ const config = {
     addSlice: addPreamble('/src/addSlice/index.jsx'),
     explore: addPreamble('/src/explore/index.jsx'),
     dashboard: addPreamble('/src/dashboard/index.jsx'),
+    puredashboard: addPreamble('/src/puredashboard/index.jsx'),
     sqllab: addPreamble('/src/SqlLab/index.jsx'),
     welcome: addPreamble('/src/welcome/index.jsx'),
     profile: addPreamble('/src/profile/index.jsx'),
